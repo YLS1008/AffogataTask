@@ -1,2 +1,19 @@
-<h1>Pixels#home</h1>
-<p>Find me in app/views/pixels/home.html.erb</p>
+<div class="basic-container">
+  <h1>
+    Pixel Breeding Platform
+  </h1>
+</div>
+
+<div class="basic-container">
+  <div class="inner-container">
+    <h2>
+      Please define the initial Pixel population
+    </h2>
+    <%= bootstrap_form_for(:pixel, url: init_breed_path, local: true, only_path: true ) do |f| %>
+      <%= f.number_field :max_pop, label: 'Set maximum size of population' %>
+      <%= f.color_field :color_a, label: 'Pick a color for the first Parent Pixel', required: true  %>
+      <%= f.color_field :color_b, label: 'Pick a color for the second Parent Pixel', required: true  %>
+      <%= f.submit 'Start Breeding' %>
+    <% end %>
+  </div>
+</div>

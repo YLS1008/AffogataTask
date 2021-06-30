@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'pixels/home'
-  get 'pixels/breed'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root to: 'pixels#home'
+  post '/start_breeding', to: 'pixels#initialize_breed', as: :init_breed
+  get '/breed', to: 'pixels#breed', as: :breed
+  get '/reset', to: 'pixels#reset', as: :reset
+
 end

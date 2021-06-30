@@ -1,0 +1,25 @@
+@import './definitions.scss';
+
+.basic-container {
+  @include make-container();
+  border-radius: 10%;
+  border: 2px solid;
+  background-color: rgba(122, 207, 227, 0.6);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.inner-container {
+  @include make-container();
+  background-color: white;
+  border-radius: 10%;
+  margin: 0 auto;
+  max-width: 50%;
+  margin-bottom: 30px;
+}
+
+body {
+  background-color: black;
+}

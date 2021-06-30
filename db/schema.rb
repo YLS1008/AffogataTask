@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(version: 2021_06_30_154304) do
     t.integer "r"
     t.integer "g"
     t.integer "b"
-    t.integer "parent"
-    t.integer "breed_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

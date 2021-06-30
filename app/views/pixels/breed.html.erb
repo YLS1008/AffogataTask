@@ -1,2 +1,11 @@
-<h1>Pixels#breed</h1>
-<p>Find me in app/views/pixels/breed.html.erb</p>
+<div class="basic-container">
+  <h1>
+    Pixel Population - size: <%= @all_pixels.count %>
+  </h1>
+  <div class="inner-container">
+    <% @all_pixels.each do |p| %>
+      <%= 'Pixel ID ' + p.id.to_s + ' with gene set: R:' + p.r.to_s + ' G:' + p.g.to_s + ' B:' + p.b.to_s  %><br>
+    <% end %>
+  </div>
+  <%= link_to 'Reset Population', reset_path, class: 'btn btn-secondary' %>
+</div>
